@@ -1,0 +1,147 @@
+/* Google Fonts Link */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* Navbar container styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 15px 20px;
+    color: #333;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Logo styling */
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #f52f2f;
+}
+
+.navbarIconContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbarMenuContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Navbar menu styling */
+.navbarMenu {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.navbarMenu li {
+    margin-right: 20px;
+    padding: 10px 15px;
+    /* width: 100%; */
+}
+.navbarMenu li:hover {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    color: #000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.navbarMenu li a {
+    text-decoration: none;
+    color: #5e5c5c;
+    font-weight: 600;
+}
+
+/* .navbarMenu li a:hover {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    color: #000;
+} */
+
+/* Right side login button */
+.loginButtom {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.loginButton:hover {
+    background-color: #0056b3;
+}
+
+/* Hamburger Menu Styling */
+.hamburgerIcon {
+    cursor: pointer;
+    width: 25px;
+    height: auto;
+}
+
+.navbarMenuContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Collapsible Navbar Menu on Smaller Screens */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbarIconContainer {
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .navbarMenuContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+    .navbarMenu {
+        flex-direction: column;
+        width: 100%;
+        margin: 10px 0 10px 0;
+        background: #f5ecec;
+        border-radius: 10px;
+    }
+
+    .navbarMenu li {
+        margin-right: 0;
+    }
+
+    .navbarMenu li:active {
+        background-color: #6b6565;
+        color: #000;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+   
+    .navbarMenu li a {
+        padding: 10px;
+    }
+
+    .loginButtom {
+        margin: 10px 0 15px 15px;
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger icon on smaller screens */
+    }
+}

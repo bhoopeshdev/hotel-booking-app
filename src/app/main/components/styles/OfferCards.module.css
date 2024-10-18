@@ -1,0 +1,102 @@
+.offersContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 100px 5% 50px 5%;
+    align-items: left;
+  }
+
+  .cardHeading {
+    font-size: xx-large;
+    font-weight: 800;
+    margin-bottom: 0;
+    font-family: var(--font-geist-sans);
+  }
+  
+  .cardSubheading {
+    font-weight: 500;
+    font-size: large;
+    font-family: var(--font-geist-sans);
+    color: #666;
+  }
+  
+.offersListContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    overflow: hidden;
+    width: 100%;
+  }
+
+.cardsWrapper {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  
+.offerCard {
+    min-width: 30%;
+    margin-right: 1.666%;
+    margin-left: 1.666%;
+    height: auto;
+    border: rgba(0, 0, 0, 0.1) solid 1px;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .offersContainer .image {
+    height: 80px;
+    width: 80px;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .offersContainer .text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  .offersContainer .title {
+    font-size: large;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .offersContainer .description {
+    font-size: small;
+    font-weight: light;
+    margin-right: 10px;
+  }
+  
+  .arrowContainer {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0 0 0;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .arrow {
+    background: wheat;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #333;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 100%;
+  }
+  
+  .arrow .left {
+    border-radius: 20px 20px 0 0;
+  }

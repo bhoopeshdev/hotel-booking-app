@@ -1,0 +1,45 @@
+.slider {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .testimonial {
+    font-size: 1.0rem;
+    color: #333;
+  }
+  
+  .feedback {
+    font-style: italic;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    font-size: 1.0rem;
+  }
+  
+  .name {
+    font-weight: bold;
+    font-size: 1.0rem;
+    color: #555;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .testimonial {
+      font-size: 0.9rem;
+    }
+  
+    .feedback {
+      font-size: 0.9rem;
+    }
+  
+    .name {
+      font-size: 0.9rem;
+    }
+  }
+  

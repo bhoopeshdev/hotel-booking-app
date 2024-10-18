@@ -1,0 +1,198 @@
+.cardHeadingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin-left: 5%;
+  margin-top: 50px;
+}
+
+.cardHeading {
+  font-size: xx-large;
+  font-weight: 800;
+  margin-bottom: 0;
+  font-family: var(--font-geist-sans);
+}
+
+.cardSubheading {
+  font-weight: 500;
+  font-size: large;
+  font-family: var(--font-geist-sans);
+  color: #666;
+}
+
+.sliderContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  padding-bottom: 50px;
+}
+
+.listCardContainer {
+  max-width: 100%;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardsContainer {
+  overflow: hidden;
+  width: 90%;
+}
+
+.cardsWrapper {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.card1 {
+  min-width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  background: none;
+  margin-right: 3.33%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card1 .imageContainer {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 15px 15px 0 0;
+}
+
+.card1 .image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 1px solid #eee;
+}
+
+.card1 .cardBody {
+  padding: 15px;
+  text-align: left;
+  border-radius: 10px;
+  translate: 0 -0.5rem;
+  background: white;
+  height: 110px;
+}
+
+.card1 .cardInfo {
+  display: flex;
+  flex-direction: row;
+}
+
+.card1 .cardText {
+  width: 50%;
+  text-align: left;
+}
+
+.card1 .cardPrice {
+  width: 50%;
+  text-align: right;
+}
+
+.card1 .title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.card1 .description {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+.card1 .price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  text-align: right;
+}
+
+/* Second type card styles */
+
+.card2 {
+  /* min-width: 20%; */
+  max-width: 20%;
+  background: transparent;
+  margin: 2.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.listCardContainer .cardsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  transition: transform 0.3s ease-in-out;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.card2 .image {
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 4 / 3; /* Example for a 16:9 aspect ratio */
+  object-fit: cover; /* Ensures the image scales properly */
+}
+
+.card2 .title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.card2 .description {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+.card2 .cardInfo {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.arrowLeft,
+.arrowRight {
+  background-color: wheat;
+  color: #666;
+  border: none;
+  border-radius: 100%;
+  font-size: 1.0rem;
+  cursor: pointer;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  margin: 0 5px 0 5px;
+}
+
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .card {
+    min-width: 80%;
+    /* Show 1 card on small screens */
+    max-width: 80%;
+  }
+
+  .card2 {
+    min-width: 40%;
+    background: transparent;
+    margin: 5%;
+  }
+
+}

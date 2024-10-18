@@ -1,0 +1,206 @@
+.aboutContainer {
+    color: #333;
+    min-height: 100vh;
+    margin-top: 100px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .heroSection {
+    background-size: cover;
+    background-position: center;
+    height: 300px; /* Adjust the height as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: background-image 0.3s ease-in-out;
+    background: linear-gradient(0deg, rgba(101, 98, 98, 0.5), rgba(0, 0, 0, 0.50)), url('../../../../../public/images/hero.jpg');
+    color: white;
+}
+
+.aboutUsText {
+    font-size: 48px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+.aboutUsSubText {
+    font-size: 16px;
+    font-weight: 400;
+    flex-wrap: wrap;
+    max-width: 60%;
+}
+
+.sectionContainer {
+    display: flex;
+    width: 85%;
+    margin-bottom: 50px;
+    flex-direction: row;
+    justify-content:space-around;
+    border-radius: 10px;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+  
+  .sectionText {
+    max-width: 70%;
+    margin: 10px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .sectionImg {
+    width: 30%;
+    height: auto;
+    margin: 10px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+  }
+
+  .sectionFullWidth {
+    width: 85%;
+    margin: 50px 0 50px 0;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .sectionText h2,
+  .sectionFullWidth h2 {
+    font-size: 20px;
+    color: #444;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .sectionText p,
+  .sectionFullWidth p {
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+  
+  .sectionText ul,
+  .sectionFullWidth ul {
+    font-size: 14px;
+  }
+  
+  .sectionText li,
+  .sectionFullWidth li {
+    margin-bottom: 10px;
+    max-width: 180px;
+  }
+  
+  .sectionText strong,
+  .sectionFullWidth strong {
+    color: #333;
+    font-weight: 600;
+  }
+
+  .whyChooseUsList {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+  }
+
+  .whyChooseUsListItem {
+    width: 20%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.0%;
+    margin: 2.5%;
+    background: -webkit-gradient(linear, left top, right top, from(#717070), to(#8d9e9e));
+    color: white;
+    border-radius: 25% 25% 0 0;
+  }
+
+  .whyChooseUsListItem p {
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    justify-items: center;
+    margin: 0;
+    font-weight: 500;
+    margin: 0 20px 0 20px;
+  }
+
+  .iconsStyle {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .aboutContainer {
+      padding: 30px 10px;
+    }
+    
+    .sectionContainer {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 50px;
+      padding: 20px;
+    }
+
+    .sectionFullWidth {
+      width: 85%;
+    }
+  
+    .sectionText {
+      min-width: 100%;
+      align-items: center;
+      margin: 0;
+      padding: 5px 20px 5px 20px;
+    }
+  
+    .sectionText h2, .sectionFullWidth h2 {
+      font-size: 14px;
+    }
+  
+    .sectionText p, .sectionText ul, .sectionFullWidth p, .sectionFullWidth ul {
+      font-size: 12px;
+    }
+
+    .sectionFullWidth {
+      max-width: 100%;
+      margin: 50px;
+    }
+
+    .sectionImg {
+      width: 70%;
+      height: auto;
+      background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    }
+
+    .whyChooseUsList {
+      flex-wrap: wrap;
+    }
+  
+    .whyChooseUsListItem {
+      width: 40%;
+      height: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2.0%;
+      margin: 5%;
+      background: -webkit-gradient(linear, left top, right top, from(#717070), to(#8d9e9e));
+      color: white;
+      border-radius: 25% 25% 0 0;
+    }
+  }
+  
