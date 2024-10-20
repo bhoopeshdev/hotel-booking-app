@@ -56,7 +56,8 @@
   }
 
   .sectionImg {
-    width: 30%;
+    width: 50%;
+    max-width: 450px;
     height: auto;
     margin: 10px;
     padding: 20px;
@@ -160,7 +161,7 @@
     }
   
     .sectionText {
-      min-width: 100%;
+      width: 50%;
       align-items: center;
       margin: 0;
       padding: 5px 20px 5px 20px;
@@ -168,6 +169,7 @@
   
     .sectionText h2, .sectionFullWidth h2 {
       font-size: 14px;
+      width: 100%;
     }
   
     .sectionText p, .sectionText ul, .sectionFullWidth p, .sectionFullWidth ul {

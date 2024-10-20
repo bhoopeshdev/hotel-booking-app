@@ -3,10 +3,13 @@ import { useState,useEffect } from 'react';
 import Link from 'next/link';
 import styles from './styles/Navbar.module.css';
 import { RxHamburgerMenu } from "react-icons/rx";
+import { toggle } from '@nextui-org/theme';
 
-const Navbar = () => {
+const Navbar = (data) => {
+
   const [isOpen, setIsOpen] = useState(false);
   const [isScreenWide, setIsScreenWide] = useState(false);
+  const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
 
   useEffect(() => {
 
@@ -38,6 +41,22 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const toggleProfileDropdown = () => {
+    setIsProfileDropdownOpen(!isProfileDropdownOpen);
+  };
+
+  const handleLoginPopup = () => {
+    if(!isScreenWide) {
+      toggleMenu();
+    }
+    data.handleLoginPopup();
+  };
+
+  const logout = () => {
+    toggleProfileDropdown();
+    data.handleLogin();
+  };
+
   return (
     <div className={styles.navbar}>
 
@@ -58,7 +77,31 @@ const Navbar = () => {
             <li><Link href="/main/contact">Contact</Link></li>
           </ul>
           <div className={styles.navbarRight}>
-            <button className={styles.loginButtom}>Login</button>
+            {
+              !data.isLoggedIn ? 
+              <button className={styles.loginButtom} onClick={handleLoginPopup}>Login</button> :
+              <div className={styles.profileContainer}>
+                <div className={styles.profileDropdownIconContainer}>
+                  <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" className={styles.profileIcon} alt="Profile Icon" onClick={toggleProfileDropdown}/>
+                  <p className={styles.profileNameNavBar}>John Doe</p>
+                </div>
+                { isProfileDropdownOpen && <div className={styles.profileDropdown}>
+
+                    <div className={styles.profileDetails}>
+                      <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" className={styles.profileIcon} alt="Profile Icon"/>
+                      <p className={styles.userName}>John Doe</p>
+                    </div>
+                    
+                    <ul>
+                      <li>Update Profile</li>
+                      <li>Settings</li>
+                      <li onClick={() => logout()}>Logout</li>
+                    </ul>
+
+                </div>
+                }
+              </div>
+            }
           </div>
         </div>
       )}

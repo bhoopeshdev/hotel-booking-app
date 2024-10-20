@@ -1,13 +1,59 @@
+"use client"
 import styles from './styles/sideSection.module.css';
 import { MdOutlineBedroomChild } from "react-icons/md";
 import { BiSolidOffer } from "react-icons/bi";
 import { RiVipCrownFill } from "react-icons/ri";
+import { useEffect,useState } from 'react';
+import CustomDatePicker from './customDatePicker';
+
+
+async function fetchReviewData() {
+    const reviewData = [
+        {
+            name: "John Doe",
+            feedback: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl sit amet ultricies lacinia, nisl nisl aliquet nisl, eget aliquam nisl nisl sit amet nisl.",
+            date: "2022-01-01",
+            rating: 4.5
+        },
+        {
+            name: "Jane Smith",
+            feedback: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl sit amet ultricies lacinia, nisl nisl aliquet nisl, eget aliquam nisl nisl sit amet nisl.",
+            date: "2022-01-01",
+            rating: 4.0
+        },
+        {
+            name: "Sam Wilson",
+            feedback: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl sit amet ultricies lacinia, nisl nisl aliquet nisl, eget aliquam nisl nisl sit amet nisl.",
+            date: "2022-01-01",
+            rating: 5.0
+        },
+        {
+            name: "Maria Rodriguez",
+            feedback: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl sit amet ultricies lacinia, nisl nisl aliquet nisl, eget aliquam nisl nisl sit amet nisl.",
+            date: "2022-01-01",
+            rating: 4.8
+        },
+    ]
+    return reviewData
+}
 
 /**
  * SideSection: A component which renders the price details of a hotel
  * @returns {React.ReactElement} The component element
  */
 const SideSection = () => {
+
+    const [reviewData, setReviewData] = useState([]);
+    const [guests, setGuests] = useState(1);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const data = await fetchReviewData();
+            setReviewData(data);
+        };
+    
+        fetchData();
+    }, []);
 
     return (
         <div className={styles.sideSection}>
@@ -20,10 +66,20 @@ const SideSection = () => {
                 </div>
                 <div className={styles.bookingDetailsContainer}>
                     <div className={styles.dateSection}>
-                        <p className={styles.dateSectionText}>Wed,15 Oct - Fri,16 Oct</p>
+                        <CustomDatePicker />
                     </div>
                     <div className={styles.occupancySection}>
-                        <p className={styles.occupancySectionText}>2 guests</p>
+                        <p className={styles.occupancyText}>Guests</p>
+                        <input
+                            type="number"
+                            id="guests"
+                            value={guests}
+                            onChange={(e) => setGuests(e.target.value)}
+                            min="1"
+                            max="4"
+                            placeholder="Guests"
+                            className={styles.occupancyInput}
+                        />
                     </div>
                 </div>
                 <div className={styles.roomTypeContainer}>
@@ -88,16 +144,20 @@ const SideSection = () => {
                     <div className={styles.numberOfRatings}>4.5K ratings</div>
                 </div>
                 <div className={styles.reviewContainer}>
-                    <div className={styles.review}>
-                        <div className={styles.reviewHeader}>
-                            <div className={styles.reviewName}>John Doe</div>
-                            <div className={styles.reviewDate}>Reviewed on 12th March 2022</div>
-                            <div className={styles.individualRating}>4.8</div>
+                    {reviewData.map((review,index) => (
+                        <div className={styles.review} key={index}>
+                            <div className={styles.reviewHeader}>
+                                <div>
+                                    <div className={styles.reviewName}>{review.name}</div>
+                                    <div className={styles.reviewDate}>Reviewed on {review.date}</div>
+                                </div>
+                                <div className={styles.individualRating}>{review.rating}</div>
+                            </div>
+                            <div className={styles.reviewContent}>
+                               {review.feedback}
+                            </div>
                         </div>
-                        <div className={styles.reviewContent}>
-                            I had a great time. The staff was friendly and helpful. The room was clean and comfortable. I would recommend this hotel to anyone looking for a great experience.
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
         </div>

@@ -1,5 +1,4 @@
 import Cards from './components/cards';
-import Footer from './components/Footer';
 import Hero from './components/hero';
 import SearchBar from './components/searchbar';
 

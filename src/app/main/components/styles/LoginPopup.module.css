@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.model {
+    /* display: none; */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.modalContent {
+    background-color: #fefefe;
+    margin: 20% auto 20% auto;
+    border: 1px solid #888;
+    padding: 0;
+    width: 80%;
+    max-width: 1200px;
+    height: 60%;
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.modelHeader {
+    width: 70%;
+    margin-bottom: 20px;
+}
+
+.modelHeader h1 {
+    width: 70;
+    margin-left: 20px;
+    padding: 0;
+    font-size: 36px;
+    font-weight: 600;
+    color: #353434;;
+}
+
+.firstHalf, .secondHalf {
+    width: 50%;
+    height: auto;
+    padding: 10px 0 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    height: fit-content;
+    padding: 10px 20px 10px 20px;
+}
+
+
+/*assign full width inputs*/
+.input[type=text],
+.input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 5px 0 20px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.formLabel {
+    font-size: 16px;
+    font-weight: 700;
+    color: #5c5b5b;
+    margin: 0 0 0 5px;
+}
+
+/*set a style for the buttons*/
+.button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 60%;
+    align-self: center;
+}
+
+/* set a hover effect for the button*/
+.button:hover {
+    opacity: 0.8;
+}
+
+/*set extra style for the cancel button*/
+.cancelbtn {
+    color: green;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    padding: 10px 18px;
+    background: transparent;
+    font-size: 25px; /* Adjust font size to make it clearer */
+    position: absolute;
+    top: 10px; /* Position it away from the top edge */
+    right: 20px; /* Position it away from the right edge */
+}
+
+.rememberMeRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    margin: 10px 0 0 10px;
+}
+
+.firstHalf {
+    background: linear-gradient(0deg, rgba(233, 230, 230, 0.5), rgba(111, 127, 152, 0.5));
+    position: relative;
+    overflow: hidden;
+}
+
+.circle1 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 400px;
+    height: 400px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    transform: translate(50%, 50%);
+    z-index: -1;
+}
+
+.circle2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 400px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    /* Adjust cancel button for smaller screens */
+    .cancelbtn {
+        top: 15px; /* Adjust to ensure visibility */
+        right: 15px; /* Adjust to ensure it's clickable */
+        z-index: 1;
+    }
+
+    .modalContent {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        padding: 20px; /* Add padding to avoid content sticking to edges */
+    }
+
+    .modelHeader {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .firstHalf {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .firstHalf h1 {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .secondHalf {
+        width: 90%;
+        border-radius: 20px;
+        position: relative; /* Change from absolute to relative for proper layout */
+        top: auto;
+        left: auto;
+        transform: none;
+        padding: 20px;
+        margin: 0;
+    }
+
+    .loginForm {
+        width: 100%;
+        padding: 10px;
+    }
+}

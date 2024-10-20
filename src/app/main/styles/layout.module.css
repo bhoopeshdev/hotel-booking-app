@@ -1,0 +1,11 @@
+.layoutWrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the layout takes at least the full height of the viewport */
+  }
+  
+  .contentWrapper {
+    padding-bottom: 20px; /* Optional padding if needed */
+    display: flex;
+    flex-direction: column;
+  }

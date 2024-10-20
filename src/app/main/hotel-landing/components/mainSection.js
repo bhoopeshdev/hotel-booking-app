@@ -93,10 +93,10 @@ const MainSection = ({hotelData}) => {
                 <table className={styles.roomTypeTable}>
                     <thead>
                         <tr>
-                            <th>Room Type</th>
-                            <th>Number of Guests</th>
-                            <th>Price</th>
-                            <th>Select</th>
+                            <th className={styles.th}>Room Type</th>
+                            <th className={styles.th}>Number of Guests</th>
+                            <th className={styles.th}>Price</th>
+                            <th className={styles.th}>Select</th>
                         </tr>
                     </thead>
                     <tbody>

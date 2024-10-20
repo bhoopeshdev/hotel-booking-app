@@ -4,8 +4,8 @@ const Hero = () => {
     return (
         <section className={styles.hero}>
             <div className={styles.heroContent}>
-                <h1>Welcome to Our Website</h1>
-                <p>This is a captivating hero section with engaging text.</p>
+                <h1>Welcome to Hotel & Co</h1>
+                <p>The Best Hotel Booking Platform</p>
             </div>
         </section>
     )

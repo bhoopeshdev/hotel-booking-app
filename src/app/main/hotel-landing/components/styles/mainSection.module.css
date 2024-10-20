@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     box-sizing: border-box;
     margin: 0;
     padding: 0 20px 0 20px;
@@ -179,6 +179,7 @@
     margin: 0;
     padding: 10px;
     width: 100%;
+    overflow-x: auto;
 }
 
 .featureTags p {
@@ -292,7 +293,7 @@
 
 /* Default button styles (unchanged) */
 .roomTypeTable .selectButton {
-    width: 200px;
+    width: 150px;
     height: 50px;
     padding: 10px;
     border-radius: 10px;
@@ -527,4 +528,20 @@
     border-radius: 15px;
     padding: 5px 10px 5px 10px;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .mainSection {
+        width: 100%;
+    }
+}
+
+/* for mobile sceen */
+@media (max-width: 480px) {
+    .roomTypeTable .selectButton {
+        width: 100px;
+    }
+    .roomTypeTable .th {
+        padding: 0 10px 0 10px;
+    }
 }
